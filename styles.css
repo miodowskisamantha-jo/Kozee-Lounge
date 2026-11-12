@@ -18,21 +18,18 @@ body{
 /* HEADER */
 
 header{
-    background:
-    linear-gradient(
+    background:linear-gradient(
         to bottom,
         #000000,
         #121212
     );
 
     text-align:center;
-
     padding:35px 20px;
 
     border-bottom:4px solid #00d4b4;
 
-    box-shadow:
-    0 0 25px rgba(0,212,180,.35);
+    box-shadow:0 0 25px rgba(0,212,180,.35);
 }
 
 .header-logo{
@@ -53,14 +50,19 @@ header{
 
 nav{
     background:#1a1a1a;
+
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:25px;
+
     padding:15px;
+
     position:sticky;
     top:0;
+
     z-index:100;
+
     border-bottom:1px solid #333;
 }
 
@@ -78,16 +80,18 @@ nav a:hover{
 /* HERO SECTION */
 
 .hero{
+    height:70vh;
+
     background:
     linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.45)
     ),
-    url('images/kozee-banner.jpg');
+    url("images/kozee-banner.jpg");
 
     background-size:cover;
     background-position:center;
-}
+    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
@@ -97,23 +101,26 @@ nav a:hover{
 }
 
 .overlay{
-    max-width:800px;
+    max-width:900px;
     padding:20px;
 }
 
 .overlay h1{
     font-size:3rem;
     margin-bottom:15px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.75);
 }
 
 .overlay h2{
     color:#f4c430;
     margin-bottom:20px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.75);
 }
 
 .overlay p{
-    margin-bottom:15px;
     font-size:1.1rem;
+    margin-bottom:15px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.75);
 }
 
 /* BUTTONS */
@@ -139,6 +146,7 @@ nav a:hover{
 
 .btn:hover{
     background:#f4c430;
+    transform:translateY(-2px);
 }
 
 /* GENERAL SECTIONS */
@@ -153,6 +161,10 @@ nav a:hover{
     text-align:center;
 }
 
+.hours{
+    background:#181818;
+}
+
 .specials{
     background:#101010;
 }
@@ -161,12 +173,16 @@ nav a:hover{
     background:#181818;
 }
 
-.hours{
+.events{
+    background:#121212;
+}
+
+.gallery{
     background:#181818;
 }
 
 .visit{
-    background:#181818;
+    background:#121212;
 }
 
 h2{
@@ -174,7 +190,7 @@ h2{
     margin-bottom:25px;
 }
 
-/* EVENT CARDS */
+/* CARD LAYOUT */
 
 .card-grid{
     display:grid;
@@ -185,7 +201,6 @@ h2{
     gap:20px;
 
     max-width:1200px;
-
     margin:auto;
 }
 
@@ -206,9 +221,11 @@ h2{
 
 .card:hover{
     transform:translateY(-5px);
+    box-shadow:
+    0 8px 25px rgba(0,212,180,.2);
 }
 
-/* GALLERY */
+/* PHOTO GALLERY */
 
 .gallery-grid{
     display:grid;
@@ -259,7 +276,7 @@ footer h3{
     margin-bottom:10px;
 }
 
-/* FLOATING PHONE BUTTON */
+/* FLOATING CALL BUTTON */
 
 .call-button{
     position:fixed;
@@ -289,20 +306,24 @@ footer h3{
     background:#f4c430;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media (max-width:768px){
+
+    .header-logo{
+        width:300px;
+    }
 
     .overlay h1{
         font-size:2rem;
     }
 
     .overlay h2{
-        font-size:1.4rem;
+        font-size:1.5rem;
     }
 
-    .header-logo{
-        width:300px;
+    .overlay p{
+        font-size:1rem;
     }
 
     nav{
@@ -310,8 +331,8 @@ footer h3{
     }
 
     .hero{
-        height:auto;
         min-height:60vh;
+        height:auto;
         padding:40px 20px;
     }
 }
