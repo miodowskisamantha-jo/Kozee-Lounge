@@ -140,3 +140,8 @@ nav a{
 nav a:hover{
     color:#f4c430;
 }
+
+.specials{
+    padding:60px 20px;
+    background:#101010;
+}
