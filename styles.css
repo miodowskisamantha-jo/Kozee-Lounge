@@ -119,3 +119,24 @@ padding:60px 20px;
 background:#181818;
 }
 
+nav{
+    background:#1a1a1a;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:#00d4b4;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f4c430;
+}
