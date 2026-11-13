@@ -25,6 +25,17 @@ content:
           - name: sunday
             label: Sunday special
             type: string
+      - name: announcements
+        label: Latest Announcements
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Announcement title
+            type: string
+          - name: details
+            label: Announcement text
+            type: text
       - name: events
         label: Events
         type: object

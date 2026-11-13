@@ -5,6 +5,16 @@
     "schedule": "Monday - Saturday • 6 PM - 9 PM",
     "sunday": "All Day Sunday"
   },
+  "announcements": [
+    {
+      "title": "🏈 Husker Football Saturdays",
+      "details": "Join us for every Husker game with fellow fans, cold drinks, and great company."
+    },
+    {
+      "title": "🎤 Karaoke Nights",
+      "details": "Every Thursday and Friday from 9:30 PM until 2:00 AM."
+    }
+  ],
   "events": [
     {
       "title": "🎤 Karaoke Thursday Nights",
@@ -20,7 +30,7 @@
     },
     {
       "title": "🏈 Husker Football Saturdays",
-      "details": "1130 Saturday 11/14/2026"
+      "details": "Every Game Day"
     },
     {
       "title": "🎧 DJ Sundays",
@@ -29,9 +39,6 @@
     {
       "title": "🍻 Happy Hour",
       "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday"
-    },
-    {
-      "title": "Love you Emily"
     }
   ],
   "gallery": [

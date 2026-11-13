@@ -17,6 +17,26 @@ async function loadSiteContent() {
                 });
         }
 
+        if (Array.isArray(content.announcements)) {
+            const announcements = document.getElementById("announcements-grid");
+            announcements.replaceChildren();
+            content.announcements.forEach((announcement) => {
+                const card = document.createElement("div");
+                card.className = "card";
+                const title = document.createElement("h3");
+                title.textContent = announcement.title || "Announcement";
+                card.append(title);
+                (Array.isArray(announcement.details) ? announcement.details : [announcement.details])
+                    .filter(Boolean)
+                    .forEach((detail) => {
+                        const paragraph = document.createElement("p");
+                        paragraph.textContent = detail;
+                        card.append(paragraph);
+                    });
+                announcements.append(card);
+            });
+        }
+
         if (Array.isArray(content.events)) {
             const events = document.getElementById("events-grid");
             events.replaceChildren();
@@ -49,7 +69,6 @@ async function loadSiteContent() {
             });
         }
     } catch (error) {
-        // Keep the HTML's built-in fallback content visible if the JSON cannot load.
         console.error("Could not load editable site content:", error);
     }
 }
