@@ -1,0 +1,113 @@
+/* Photo-book gallery: two photos per spread with accessible page controls */
+.photo-book{
+    width:min(100%, 1050px);
+    margin:0 auto;
+    padding:clamp(16px, 3vw, 30px);
+    border:1px solid rgba(0,212,180,.7);
+    border-radius:18px;
+    background:linear-gradient(145deg, #171d1e, #090c0d 68%);
+    box-shadow:0 0 12px rgba(0,212,180,.32), 0 0 34px rgba(0,212,180,.12), inset 0 0 22px rgba(0,0,0,.7);
+}
+
+.photo-book-spread{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:clamp(10px, 2.5vw, 26px);
+    min-height:260px;
+    padding:clamp(12px, 2vw, 22px);
+    border-radius:10px;
+    background:linear-gradient(90deg, #f8f2df 0%, #fffdf5 49.5%, #d7d0bd 50%, #f8f2df 51%, #fffdf5 100%);
+    box-shadow:inset 0 0 18px rgba(60,40,15,.2), 0 0 15px rgba(0,212,180,.28);
+    transform-origin:left center;
+}
+
+.photo-book-page{
+    min-width:0;
+    padding:clamp(8px, 2vw, 18px);
+    color:#252525;
+    text-align:center;
+    background:rgba(255,255,255,.52);
+    box-shadow:0 3px 12px rgba(0,0,0,.18);
+}
+
+.photo-book-page img{
+    display:block;
+    width:100%;
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+    border:5px solid #fff;
+    box-shadow:0 0 8px rgba(0,212,180,.52), 0 0 20px rgba(0,212,180,.3), 0 3px 8px rgba(0,0,0,.22);
+}
+
+.photo-book-page figcaption{
+    margin-top:10px;
+    color:#333;
+    font-family:'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
+    font-size:clamp(.8rem, 2vw, 1rem);
+}
+
+.photo-book-empty{
+    grid-column:1 / -1;
+    align-self:center;
+    color:#343434;
+    font-family:'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
+}
+
+.photo-book-controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(10px, 3vw, 24px);
+    margin-top:22px;
+}
+
+.photo-book-button{
+    border:1px solid rgba(0,212,180,.85);
+    border-radius:999px;
+    padding:10px 18px;
+    background:#101819;
+    color:#83f8e4;
+    font:inherit;
+    font-weight:700;
+    cursor:pointer;
+    text-shadow:0 0 7px rgba(0,212,180,.7);
+    box-shadow:0 0 9px rgba(0,212,180,.3);
+}
+
+.photo-book-button:hover:not(:disabled),
+.photo-book-button:focus-visible:not(:disabled){
+    color:#fff;
+    box-shadow:0 0 14px rgba(0,212,180,.65);
+}
+
+.photo-book-button:disabled{
+    opacity:.42;
+    cursor:not-allowed;
+}
+
+.photo-book-status{
+    min-width:95px;
+    color:#ffef83;
+    text-shadow:0 0 8px rgba(244,196,48,.65);
+}
+
+.page-turn{
+    animation:page-turn-in .35s ease-out;
+}
+
+@keyframes page-turn-in{
+    from{ opacity:.55; transform:perspective(900px) rotateY(-7deg); }
+    to{ opacity:1; transform:perspective(900px) rotateY(0); }
+}
+
+@media (max-width:600px){
+    .photo-book-spread{ min-height:190px; gap:8px; padding:8px; }
+    .photo-book-page{ padding:6px; }
+    .photo-book-page img{ border-width:3px; }
+    .photo-book-controls{ gap:8px; }
+    .photo-book-button{ padding:9px 12px; font-size:.9rem; }
+}
+
+@media (prefers-reduced-motion:reduce){
+    .page-turn{ animation:none; }
+}

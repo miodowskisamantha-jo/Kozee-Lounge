@@ -6,6 +6,7 @@
     <title>Kozee Lounge | No Bad Days</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="rules.css">
+    <link rel="stylesheet" href="gallery-book.css">
     <script src="site-content.js" defer></script>
 </head>
 
@@ -82,7 +83,16 @@
 
 <section id="gallery" class="gallery">
     <h2>Kozee Lounge Memories</h2>
-    <div id="gallery-grid" class="gallery-grid"></div>
+    <div class="photo-book" aria-label="Kozee Lounge photo book">
+        <div id="gallery-pages" class="photo-book-spread" aria-live="polite" aria-atomic="true">
+            <p class="photo-book-empty">Photos will appear here.</p>
+        </div>
+        <div class="photo-book-controls">
+            <button id="gallery-prev" class="photo-book-button" type="button" aria-label="Show previous photos" disabled>← Previous</button>
+            <p id="gallery-page-status" class="photo-book-status" aria-live="polite">Page 0 of 0</p>
+            <button id="gallery-next" class="photo-book-button" type="button" aria-label="Show next photos" disabled>Next →</button>
+        </div>
+    </div>
 </section>
 
 <section id="visit" class="visit">

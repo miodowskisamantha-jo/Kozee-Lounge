@@ -113,16 +113,56 @@ async function loadSiteContent() {
         }
 
         if (Array.isArray(content.gallery)) {
-            const gallery = document.getElementById("gallery-grid");
-            if (gallery) {
-                gallery.replaceChildren();
-                content.gallery.filter((photo) => photo.image).forEach((photo) => {
-                    const image = document.createElement("img");
-                    image.src = photo.image;
-                    image.alt = photo.alt || "Kozee Lounge memory";
-                    image.loading = "lazy";
-                    gallery.append(image);
-                });
+            const photos = content.gallery.filter((photo) => photo.image);
+            const spread = document.getElementById("gallery-pages");
+            const previous = document.getElementById("gallery-prev");
+            const next = document.getElementById("gallery-next");
+            const status = document.getElementById("gallery-page-status");
+
+            if (spread && previous && next && status) {
+                const photosPerPage = 2;
+                const pageCount = Math.ceil(photos.length / photosPerPage);
+                let currentPage = 0;
+
+                const showPage = (page) => {
+                    currentPage = Math.max(0, Math.min(page, pageCount - 1));
+                    spread.replaceChildren();
+
+                    const pagePhotos = photos.slice(currentPage * photosPerPage, (currentPage + 1) * photosPerPage);
+                    pagePhotos.forEach((photo) => {
+                        const figure = document.createElement("figure");
+                        figure.className = "photo-book-page";
+                        const image = document.createElement("img");
+                        image.src = photo.image;
+                        image.alt = photo.alt || "Kozee Lounge memory";
+                        image.loading = "lazy";
+                        figure.append(image);
+                        if (photo.alt) {
+                            const caption = document.createElement("figcaption");
+                            caption.textContent = photo.alt;
+                            figure.append(caption);
+                        }
+                        spread.append(figure);
+                    });
+
+                    spread.classList.remove("page-turn");
+                    void spread.offsetWidth;
+                    spread.classList.add("page-turn");
+                    status.textContent = pageCount ? `Page ${currentPage + 1} of ${pageCount}` : "Page 0 of 0";
+                    previous.disabled = currentPage === 0 || pageCount === 0;
+                    next.disabled = currentPage >= pageCount - 1 || pageCount === 0;
+
+                    if (pageCount === 0) {
+                        const empty = document.createElement("p");
+                        empty.className = "photo-book-empty";
+                        empty.textContent = "Photos will appear here.";
+                        spread.append(empty);
+                    }
+                };
+
+                previous.addEventListener("click", () => showPage(currentPage - 1));
+                next.addEventListener("click", () => showPage(currentPage + 1));
+                showPage(0);
             }
         }
     } catch (error) {
