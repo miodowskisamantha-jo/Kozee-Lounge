@@ -1,0 +1,55 @@
+/* Rules & Policies: handwritten neon list, no numbered cards */
+.rules-section > p{
+    margin:-8px auto 28px;
+    color:#d5fff8;
+    text-shadow:0 0 7px rgba(0,212,180,.55);
+}
+
+.rules-list{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    width:min(100%, 900px);
+    margin:0 auto;
+    padding:0 clamp(12px, 4vw, 36px);
+    list-style:none;
+    text-align:left;
+}
+
+.rules-list li{
+    position:relative;
+    padding:15px 12px 15px 38px;
+    color:#a6fff1;
+    font-family:'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
+    font-size:clamp(1.05rem, 2.7vw, 1.35rem);
+    line-height:1.55;
+    text-shadow:0 0 4px #00d4b4, 0 0 10px rgba(0,212,180,.78), 0 0 20px rgba(0,212,180,.35);
+    border-bottom:1px solid rgba(0,212,180,.22);
+}
+
+.rules-list li::before{
+    content:"✦";
+    position:absolute;
+    left:8px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#ff91e8;
+    font-family:Georgia, serif;
+    font-size:1.1rem;
+    text-shadow:0 0 5px #ff5adb, 0 0 12px rgba(255,90,219,.82);
+}
+
+.rules-list li:last-child{
+    border-bottom:0;
+}
+
+.rules-list li:hover{
+    color:#fff;
+    text-shadow:0 0 5px #00d4b4, 0 0 14px rgba(0,212,180,.95), 0 0 25px rgba(0,212,180,.5);
+}
+
+@media (max-width:600px){
+    .rules-list{ padding:0 4px; }
+    .rules-list li{ padding:13px 8px 13px 32px; }
+    .rules-list li::before{ left:4px; }
+}

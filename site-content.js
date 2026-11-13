@@ -49,13 +49,10 @@ async function loadSiteContent() {
             const rules = document.getElementById("rules-grid");
             if (rules) {
                 rules.replaceChildren();
-                content.rules.forEach((rule, index) => {
-                    const card = document.createElement("article");
-                    card.className = "card";
-                    const title = document.createElement("h3");
-                    title.textContent = `${index + 1}. ${rule.text || ""}`;
-                    card.append(title);
-                    rules.append(card);
+                content.rules.forEach((rule) => {
+                    const item = document.createElement("li");
+                    item.textContent = typeof rule === "string" ? rule : (rule.text || "");
+                    if (item.textContent.trim()) rules.append(item);
                 });
             }
         }
