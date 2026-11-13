@@ -47,6 +47,20 @@ content:
           - name: details
             label: Time and details
             type: text
+      - name: birthdays
+        label: Annual Birthdays
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name to display
+            type: string
+          - name: date
+            label: Birthday date (MM-DD; repeats yearly)
+            type: string
+          - name: note
+            label: Optional note
+            type: text
       - name: gallery
         label: Gallery photos
         type: object

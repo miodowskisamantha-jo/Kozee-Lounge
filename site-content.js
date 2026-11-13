@@ -57,6 +57,66 @@ async function loadSiteContent() {
             });
         }
 
+        if (Array.isArray(content.birthdays)) {
+            const birthdays = document.getElementById("birthdays-grid");
+            birthdays.replaceChildren();
+            const today = new Date();
+            const todayUtc = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+            const upcoming = content.birthdays
+                .map((birthday) => {
+                    const match = /^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.exec(birthday.date || "");
+                    if (!match || !birthday.name) return null;
+                    const month = Number(match[1]);
+                    const day = Number(match[2]);
+                    const currentYear = today.getFullYear();
+                    let year = currentYear;
+                    let nextDate = new Date(year, month - 1, day);
+                    if (nextDate.getMonth() !== month - 1 || nextDate.getDate() !== day) return null;
+                    if (Date.UTC(year, month - 1, day) < todayUtc) {
+                        year += 1;
+                        nextDate = new Date(year, month - 1, day);
+                        if (nextDate.getMonth() !== month - 1 || nextDate.getDate() !== day) return null;
+                    }
+                    const daysAway = Math.round((Date.UTC(year, month - 1, day) - todayUtc) / 86400000);
+                    return { ...birthday, nextDate, daysAway };
+                })
+                .filter(Boolean)
+                .sort((a, b) => a.daysAway - b.daysAway);
+
+            if (upcoming.length === 0) {
+                const empty = document.createElement("p");
+                empty.className = "birthday-empty";
+                empty.textContent = "Birthday celebrations will be posted here.";
+                birthdays.append(empty);
+            } else {
+                upcoming.forEach((birthday) => {
+                    const card = document.createElement("article");
+                    card.className = "card birthday-card";
+                    const title = document.createElement("h3");
+                    title.textContent = `🎂 ${birthday.name}`;
+                    card.append(title);
+
+                    const date = document.createElement("p");
+                    date.className = "birthday-date";
+                    date.textContent = birthday.nextDate.toLocaleDateString(undefined, { month: "long", day: "numeric" });
+                    card.append(date);
+
+                    const countdown = document.createElement("p");
+                    countdown.className = "birthday-countdown";
+                    countdown.textContent = birthday.daysAway === 0 ? "Celebrating today!" :
+                        birthday.daysAway === 1 ? "Tomorrow!" : `In ${birthday.daysAway} days`;
+                    card.append(countdown);
+
+                    if (birthday.note) {
+                        const note = document.createElement("p");
+                        note.textContent = birthday.note;
+                        card.append(note);
+                    }
+                    birthdays.append(card);
+                });
+            }
+        }
+
         if (Array.isArray(content.gallery)) {
             const gallery = document.getElementById("gallery-grid");
             gallery.replaceChildren();
