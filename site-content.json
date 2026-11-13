@@ -11,85 +11,35 @@
       "details": "Join us for every Husker game with fellow fans, cold drinks, and great company. Mama Pizza at Half-Time and complimentary Husker TouchDown Jello Shots."
     },
     {
-      "title": "We Love You Emily! ",
-      "details": "You are in our thoughts and prayers always and forever. "
+      "title": "We Love You Emily!",
+      "details": "You are in our thoughts and prayers always and forever."
     }
   ],
   "events": [
-    {
-      "title": "🎤 Karaoke Thursday Nights",
-      "details": "9:30 PM - 2:00 AM"
-    },
-    {
-      "title": "🎤 Karaoke Friday Nights",
-      "details": "9:30 PM - 2:00 AM"
-    },
-    {
-      "title": "🤠 Learn Line Dance",
-      "details": "Fridays 6:30p-8:30p"
-    },
-    {
-      "title": "🏈 Husker Football Saturdays",
-      "details": "11/14/2026 11:30 am Kick off, Mama's Pizza @ Half-Time, Husker Touch-Down Jello Shots! "
-    },
-    {
-      "title": "🎧 DJ Sundays",
-      "details": "Every Sunday Night"
-    },
-    {
-      "title": "🍻 Happy Hour",
-      "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday"
-    }
+    { "title": "🎤 Karaoke Thursday Nights", "details": "9:30 PM - 2:00 AM" },
+    { "title": "🎤 Karaoke Friday Nights", "details": "9:30 PM - 2:00 AM" },
+    { "title": "🤠 Learn Line Dance", "details": "Fridays 6:30p-8:30p" },
+    { "title": "🏈 Husker Football Saturdays", "details": "11/14/2026 11:30 am Kick off, Mama's Pizza @ Half-Time, Husker Touch-Down Jello Shots!" },
+    { "title": "🎧 DJ Sundays", "details": "Every Sunday Night" },
+    { "title": "🍻 Happy Hour", "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday" }
   ],
-  "birthdays": [
-    {
-      "name": "Samantha -Kozee Bar Lead",
-      "date": "08/23",
-      "note": "Virgo cusp of Leo... Happy Birthday"
-    },
-    {
-      "name": "Tommie- Owner",
-      "date": "12/26",
-      "note": "Capricorn... Its Your Birthday!! "
-    },
-    {
-      "name": "Ya-Ya-Kozee Bartender",
-      "date": "10/20",
-      "note": "Libra... Lets Party, Happy Birthday!"
-    },
-    {
-      "name": "Darius- Kozee Bartender",
-      "date": "06/10",
-      "note": "Gemini- Happy Birthday, Shots Shots Shots!!"
-    },
-    {
-      "name": "Cammy",
-      "date": "01/21",
-      "note": " Aquarius... Its Your Birthday, Happy Birthday!"
-    },
-    {
-      "name": "Bri - Kozee Shot/Bartender",
-      "date": "03/16",
-      "note": "Pisces... Its about to go down, Happy Birthday!"
-    },
-    {}
+  "birthdays": [],
+  "rules": [
+    { "text": "Zero tolerance for drama or disrespect" },
+    { "text": "No parking on the grass" },
+    { "text": "No outside drinks allowed" },
+    { "text": "No parking lot loitering" },
+    { "text": "Shoes must be worn" },
+    { "text": "We are not responsible for lost or stolen items" },
+    { "text": "Respect property, people, and rules" },
+    { "text": "We reserve the right to refuse service to anyone" },
+    { "text": "We will not serve anyone who is already intoxicated" },
+    { "text": "No drugs" }
   ],
   "gallery": [
-    {
-      "image": "/Kozee-Lounge/images/Front Entrance.jpg",
-      "alt": "Kozee Lounge front entrance"
-    },
-    {
-      "image": "/Kozee-Lounge/images/Kozee Front Looking Rear.jpg",
-      "alt": "Inside Kozee Lounge, looking toward the rear"
-    },
-    {
-      "image": "/Kozee-Lounge/images/line dancing.jpg",
-      "alt": "Line dancing at Kozee Lounge"
-    },
-    {
-      "image": "/Kozee-Lounge/images/37b58d98-3a20-47c1-ad53-7fd786657369-1_all_13869.jpg",
-      "alt": "Tommie DJ-ing"
-    }
+    { "image": "/Kozee-Lounge/images/Front Entrance.jpg", "alt": "Kozee Lounge front entrance" },
+    { "image": "/Kozee-Lounge/images/Kozee Front Looking Rear.jpg", "alt": "Inside Kozee Lounge, looking toward the rear" },
+    { "image": "/Kozee-Lounge/images/line dancing.jpg", "alt": "Line dancing at Kozee Lounge" },
+    { "image": "/Kozee-Lounge/images/37b58d98-3a20-47c1-ad53-7fd786657369-1_all_13869.jpg", "alt": "Tommie DJ-ing" }
   ]
 }

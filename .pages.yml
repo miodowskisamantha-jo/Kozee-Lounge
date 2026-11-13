@@ -61,6 +61,14 @@ content:
           - name: note
             label: Optional note
             type: text
+      - name: rules
+        label: Rules & Policies
+        type: object
+        list: true
+        fields:
+          - name: text
+            label: Rule text
+            type: text
       - name: gallery
         label: Gallery photos
         type: object
