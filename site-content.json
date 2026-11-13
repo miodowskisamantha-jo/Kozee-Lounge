@@ -16,32 +16,85 @@
     }
   ],
   "events": [
-    { "title": "🎤 Karaoke Thursday Nights", "details": "9:30 PM - 2:00 AM" },
-    { "title": "🎤 Karaoke Friday Nights", "details": "9:30 PM - 2:00 AM" },
-    { "title": "🤠 Learn Line Dance", "details": "Fridays 6:30p-8:30p" },
-    { "title": "🏈 Husker Football Saturdays", "details": "11/14/2026 11:30 am Kick off, Mama's Pizza @ Half-Time, Husker Touch-Down Jello Shots!" },
-    { "title": "🎧 DJ Sundays", "details": "Every Sunday Night" },
-    { "title": "🍻 Happy Hour", "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday" }
+    {
+      "title": "🎤 Karaoke Thursday Nights",
+      "details": "9:30 PM - 2:00 AM"
+    },
+    {
+      "title": "🎤 Karaoke Friday Nights",
+      "details": "9:30 PM - 2:00 AM"
+    },
+    {
+      "title": "🤠 Learn Line Dance",
+      "details": "Fridays 6:30p-8:30p"
+    },
+    {
+      "title": "🏈 Husker Football Saturdays",
+      "details": "11/14/2026 11:30 am Kick off, Mama's Pizza @ Half-Time, Husker Touch-Down Jello Shots!"
+    },
+    {
+      "title": "🎧 DJ Sundays",
+      "details": "Every Sunday Night"
+    },
+    {
+      "title": "🍻 Happy Hour",
+      "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday"
+    }
   ],
-  "birthdays": [],
   "rules": [
-    { "text": "Zero tolerance for drama or disrespect" },
-    { "text": "No parking on the grass" },
-    { "text": "No outside drinks allowed" },
-    { "text": "No parking lot loitering" },
-    { "text": "Shoes must be worn" },
-    { "text": "We are not responsible for lost or stolen items" },
-    { "text": "Respect property, people, and rules" },
-    { "text": "We reserve the right to refuse service to anyone" },
-    { "text": "We will not serve anyone who is already intoxicated" },
-    { "text": "No drugs" },
-    { "text": "No leaving the premises with an open container" },
-    { "text": "No weapons allowed" }
+    {
+      "text": "Zero tolerance for drama or disrespect"
+    },
+    {
+      "text": "No parking on the grass"
+    },
+    {
+      "text": "No outside drinks allowed"
+    },
+    {
+      "text": "No parking lot loitering, Gathering, Tailgating, Parties etc."
+    },
+    {
+      "text": "Shoes must be worn, also Clothes must be worn as well!"
+    },
+    {
+      "text": "We are NOT Responsible for LOST or STOLEN Items"
+    },
+    {
+      "text": "Respect Property, People, and Rules"
+    },
+    {
+      "text": "We Reserve the Right to Refuse Service to ANYONE"
+    },
+    {
+      "text": "We WILL NOT Serve You if Intoxicated or under the influence of drugs."
+    },
+    {
+      "text": "NO DRUGS ALLOWED"
+    },
+    {
+      "text": "No leaving the premises with an open container"
+    },
+    {
+      "text": "NO WEAPONS ALLOWED."
+    }
   ],
   "gallery": [
-    { "image": "/Kozee-Lounge/images/Front Entrance.jpg", "alt": "Kozee Lounge front entrance" },
-    { "image": "/Kozee-Lounge/images/Kozee Front Looking Rear.jpg", "alt": "Inside Kozee Lounge, looking toward the rear" },
-    { "image": "/Kozee-Lounge/images/line dancing.jpg", "alt": "Line dancing at Kozee Lounge" },
-    { "image": "/Kozee-Lounge/images/37b58d98-3a20-47c1-ad53-7fd786657369-1_all_13869.jpg", "alt": "Tommie DJ-ing" }
+    {
+      "image": "/Kozee-Lounge/images/Front Entrance.jpg",
+      "alt": "Kozee Lounge front entrance"
+    },
+    {
+      "image": "/Kozee-Lounge/images/Kozee Front Looking Rear.jpg",
+      "alt": "Inside Kozee Lounge, looking toward the rear"
+    },
+    {
+      "image": "/Kozee-Lounge/images/line dancing.jpg",
+      "alt": "Line dancing at Kozee Lounge"
+    },
+    {
+      "image": "/Kozee-Lounge/images/37b58d98-3a20-47c1-ad53-7fd786657369-1_all_13869.jpg",
+      "alt": "Tommie DJ-ing"
+    }
   ]
 }
