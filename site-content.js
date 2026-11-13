@@ -118,11 +118,30 @@ async function loadSiteContent() {
             const previous = document.getElementById("gallery-prev");
             const next = document.getElementById("gallery-next");
             const status = document.getElementById("gallery-page-status");
+            const lightbox = document.getElementById("gallery-lightbox");
+            const lightboxImage = document.getElementById("gallery-lightbox-image");
+            const lightboxCaption = document.getElementById("gallery-lightbox-caption");
+            const closeLightbox = document.getElementById("gallery-lightbox-close");
 
             if (spread && previous && next && status) {
                 const photosPerPage = 2;
                 const pageCount = Math.ceil(photos.length / photosPerPage);
                 let currentPage = 0;
+
+                const openLightbox = (photo) => {
+                    if (!lightbox || !lightboxImage || !lightboxCaption || typeof lightbox.showModal !== "function") return;
+                    lightboxImage.src = photo.image;
+                    lightboxImage.alt = photo.alt || "Kozee Lounge memory";
+                    lightboxCaption.textContent = photo.alt || "";
+                    lightbox.showModal();
+                };
+
+                if (closeLightbox && lightbox) {
+                    closeLightbox.addEventListener("click", () => lightbox.close());
+                    lightbox.addEventListener("click", (event) => {
+                        if (event.target === lightbox) lightbox.close();
+                    });
+                }
 
                 const showPage = (page) => {
                     currentPage = Math.max(0, Math.min(page, pageCount - 1));
@@ -132,11 +151,17 @@ async function loadSiteContent() {
                     pagePhotos.forEach((photo) => {
                         const figure = document.createElement("figure");
                         figure.className = "photo-book-page";
+                        const button = document.createElement("button");
+                        button.className = "photo-book-image-button";
+                        button.type = "button";
+                        button.setAttribute("aria-label", `View larger image: ${photo.alt || "Kozee Lounge memory"}`);
                         const image = document.createElement("img");
                         image.src = photo.image;
                         image.alt = photo.alt || "Kozee Lounge memory";
                         image.loading = "lazy";
-                        figure.append(image);
+                        button.append(image);
+                        button.addEventListener("click", () => openLightbox(photo));
+                        figure.append(button);
                         if (photo.alt) {
                             const caption = document.createElement("figcaption");
                             caption.textContent = photo.alt;
