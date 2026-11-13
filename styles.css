@@ -18,17 +18,10 @@ body{
 /* HEADER */
 
 header{
-    background:linear-gradient(
-        to bottom,
-        #000000,
-        #121212
-    );
-
+    background:linear-gradient(to bottom, #000000, #121212);
     text-align:center;
     padding:35px 20px;
-
     border-bottom:4px solid #00d4b4;
-
     box-shadow:0 0 25px rgba(0,212,180,.35);
 }
 
@@ -50,19 +43,14 @@ header{
 
 nav{
     background:#1a1a1a;
-
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:25px;
-
     padding:15px;
-
     position:sticky;
     top:0;
-
     z-index:100;
-
     border-bottom:1px solid #333;
 }
 
@@ -81,22 +69,15 @@ nav a:hover{
 
 .hero{
     height:70vh;
-
     background:
-    linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.45)
-    ),
-    url("images/kozee-banner.jpg");
-
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("images/kozee-banner.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
 }
 
@@ -127,20 +108,13 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-
     margin-top:20px;
-
     background:#00d4b4;
     color:black;
-
     padding:12px 24px;
-
     border-radius:8px;
-
     text-decoration:none;
-
     font-weight:bold;
-
     transition:.3s;
 }
 
@@ -155,35 +129,20 @@ nav a:hover{
 .specials,
 .announcements,
 .events,
+.birthdays,
 .gallery,
 .visit{
     padding:60px 20px;
     text-align:center;
 }
 
-.hours{
-    background:#181818;
-}
-
-.specials{
-    background:#101010;
-}
-
-.announcements{
-    background:#181818;
-}
-
-.events{
-    background:#121212;
-}
-
-.gallery{
-    background:#181818;
-}
-
-.visit{
-    background:#121212;
-}
+.hours{ background:#181818; }
+.specials{ background:#101010; }
+.announcements{ background:#181818; }
+.events{ background:#121212; }
+.birthdays{ background:#181818; }
+.gallery{ background:#181818; }
+.visit{ background:#121212; }
 
 h2{
     color:#f4c430;
@@ -200,7 +159,6 @@ h2{
     margin:0 auto;
     padding:34px clamp(20px, 5vw, 52px);
     border:2px solid rgba(0,212,180,.9);
-    border-top:2px solid rgba(0,212,180,.9);
     border-radius:14px;
     background:
         radial-gradient(ellipse at 18% 20%, rgba(255,255,255,.07), transparent 28%),
@@ -265,49 +223,63 @@ h2{
 
 .card-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
-
     max-width:1200px;
     margin:auto;
 }
 
 .card{
     background:#1e1e1e;
-
     padding:25px;
-
     border-radius:12px;
-
     border-top:4px solid #00d4b4;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,.25);
-
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
     transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:
-    0 8px 25px rgba(0,212,180,.2);
+    box-shadow:0 8px 25px rgba(0,212,180,.2);
+}
+
+/* BIRTHDAYS */
+
+.birthday-card{
+    border-top-color:#ff5adb;
+    background:linear-gradient(145deg, #24152b, #1e1e1e 70%);
+    box-shadow:0 5px 18px rgba(255,90,219,.12);
+}
+
+.birthday-card h3{
+    color:#ffb6ed;
+    margin-bottom:8px;
+    text-shadow:0 0 8px rgba(255,90,219,.45);
+}
+
+.birthday-date{
+    color:#83f8e4;
+    font-weight:700;
+}
+
+.birthday-countdown{
+    color:#f4c430;
+    font-size:.95rem;
+    margin-top:6px;
+}
+
+.birthday-empty{
+    grid-column:1 / -1;
+    color:#ccc;
 }
 
 /* PHOTO GALLERY */
 
 .gallery-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:15px;
-
     max-width:1200px;
-
     margin:auto;
 }
 
@@ -315,7 +287,6 @@ h2{
     width:100%;
     border-radius:10px;
     display:block;
-
     transition:.3s;
 }
 
@@ -334,11 +305,8 @@ h2{
 
 footer{
     background:black;
-
     padding:40px;
-
     text-align:center;
-
     border-top:4px solid #00d4b4;
 }
 
@@ -351,25 +319,15 @@ footer h3{
 
 .call-button{
     position:fixed;
-
     bottom:20px;
     right:20px;
-
     background:#00d4b4;
-
     color:black;
-
     padding:15px 20px;
-
     border-radius:50px;
-
     text-decoration:none;
-
     font-weight:bold;
-
-    box-shadow:
-    0 0 20px rgba(0,212,180,.5);
-
+    box-shadow:0 0 20px rgba(0,212,180,.5);
     z-index:999;
 }
 
@@ -380,33 +338,16 @@ footer h3{
 /* MOBILE RESPONSIVE */
 
 @media (max-width:768px){
-
-    .header-logo{
-        width:300px;
-    }
-
-    .overlay h1{
-        font-size:2rem;
-    }
-
-    .overlay h2{
-        font-size:1.5rem;
-    }
-
-    .overlay p{
-        font-size:1rem;
-    }
-
-    nav{
-        gap:15px;
-    }
-
+    .header-logo{ width:300px; }
+    .overlay h1{ font-size:2rem; }
+    .overlay h2{ font-size:1.5rem; }
+    .overlay p{ font-size:1rem; }
+    nav{ gap:15px; }
     .hero{
         min-height:60vh;
         height:auto;
         padding:40px 20px;
     }
-
     #specials-content{
         padding:28px 20px;
         transform:rotate(-.15deg);
