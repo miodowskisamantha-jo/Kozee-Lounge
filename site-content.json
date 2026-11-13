@@ -1,21 +1,52 @@
 {
   "specials": {
-    "description": "Ask your bartender about today's drink specials and featured beers.",
+    "description": "$2.00 Em' Blackberry Leroux shot\n$2.00 BudSelect bottle a beer\n",
     "happy_hour": "Happy Hour",
     "schedule": "Monday - Saturday • 6 PM - 9 PM",
     "sunday": "All Day Sunday"
   },
   "events": [
-    { "title": "🎤 Karaoke Thursday Nights", "details": "9:30 PM - 2:00 AM" },
-    { "title": "🎤 Karaoke Friday Nights", "details": "9:30 PM - 2:00 AM" },
-    { "title": "🤠 Learn Line Dance", "details": "Fridays 7:00 PM - 9:00 PM" },
-    { "title": "🏈 Husker Football Saturdays", "details": "Every Game Day" },
-    { "title": "🎧 DJ Sundays", "details": "Every Sunday Night" },
-    { "title": "🍻 Happy Hour", "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday" }
+    {
+      "title": "🎤 Karaoke Thursday Nights",
+      "details": "9:30 PM - 2:00 AM"
+    },
+    {
+      "title": "🎤 Karaoke Friday Nights",
+      "details": "9:30 PM - 2:00 AM"
+    },
+    {
+      "title": "🤠 Learn Line Dance",
+      "details": "Fridays 7:00 PM - 9:00 PM"
+    },
+    {
+      "title": "🏈 Husker Football Saturdays",
+      "details": "Every Game Day"
+    },
+    {
+      "title": "🎧 DJ Sundays",
+      "details": "Every Sunday Night"
+    },
+    {
+      "title": "🍻 Happy Hour",
+      "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday"
+    }
   ],
   "gallery": [
-    { "image": "/Kozee-Lounge/images/Front Entrance.jpg", "alt": "Kozee Lounge front entrance" },
-    { "image": "/Kozee-Lounge/images/Kozee Front Looking Rear.jpg", "alt": "Inside Kozee Lounge, looking toward the rear" },
-    { "image": "/Kozee-Lounge/images/line dancing.jpg", "alt": "Line dancing at Kozee Lounge" }
+    {
+      "image": "/Kozee-Lounge/images/Front Entrance.jpg",
+      "alt": "Kozee Lounge front entrance"
+    },
+    {
+      "image": "/Kozee-Lounge/images/Kozee Front Looking Rear.jpg",
+      "alt": "Inside Kozee Lounge, looking toward the rear"
+    },
+    {
+      "image": "/Kozee-Lounge/images/line dancing.jpg",
+      "alt": "Line dancing at Kozee Lounge"
+    },
+    {
+      "image": "/Kozee-Lounge/images/37b58d98-3a20-47c1-ad53-7fd786657369-1_all_13869.jpg",
+      "alt": "Tommie DJ-ing"
+    }
   ]
 }
