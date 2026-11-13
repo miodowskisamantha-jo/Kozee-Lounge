@@ -1,0 +1,49 @@
+media:
+  input: images
+  output: /Kozee-Lounge/images
+
+content:
+  - name: site-content
+    label: Specials, Events & Memories
+    type: file
+    path: site-content.json
+    format: json
+    fields:
+      - name: specials
+        label: Today's Specials
+        type: object
+        fields:
+          - name: description
+            label: Special or description
+            type: text
+          - name: happy_hour
+            label: Happy hour heading
+            type: string
+          - name: schedule
+            label: Happy hour schedule
+            type: string
+          - name: sunday
+            label: Sunday special
+            type: string
+      - name: events
+        label: Events
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Event name
+            type: string
+          - name: details
+            label: Time and details
+            type: text
+      - name: gallery
+        label: Gallery photos
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+          - name: alt
+            label: Photo description
+            type: string
