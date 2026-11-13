@@ -27,7 +27,23 @@ async function loadSiteContent() {
                 const card = document.createElement("article");
                 card.className = "card";
                 const titleText = item.title || fallbackTitle;
-                if (/husker/i.test(titleText)) card.classList.add("husker-neon");
+                const searchableText = `${titleText} ${item.details || ""}`.toLowerCase();
+                if (containerId === "events-grid") {
+                    card.classList.add("event-neon");
+                    if (/karaoke|sing|open mic/.test(searchableText)) {
+                        card.classList.add("event-neon-karaoke");
+                    } else if (/dj|music|dance party/.test(searchableText)) {
+                        card.classList.add("event-neon-dj");
+                    } else if (/husker|football/.test(searchableText)) {
+                        card.classList.add("event-neon-husker", "husker-neon");
+                    } else if (/line dance|dancing/.test(searchableText)) {
+                        card.classList.add("event-neon-dancing");
+                    } else if (/happy hour/.test(searchableText)) {
+                        card.classList.add("event-neon-happy-hour");
+                    }
+                } else if (/husker/i.test(searchableText)) {
+                    card.classList.add("husker-neon");
+                }
                 const title = document.createElement("h3");
                 title.textContent = titleText;
                 card.append(title);
@@ -146,7 +162,6 @@ async function loadSiteContent() {
                 const showPage = (page) => {
                     currentPage = Math.max(0, Math.min(page, pageCount - 1));
                     spread.replaceChildren();
-
                     const pagePhotos = photos.slice(currentPage * photosPerPage, (currentPage + 1) * photosPerPage);
                     pagePhotos.forEach((photo) => {
                         const figure = document.createElement("figure");
@@ -169,14 +184,12 @@ async function loadSiteContent() {
                         }
                         spread.append(figure);
                     });
-
                     spread.classList.remove("page-turn");
                     void spread.offsetWidth;
                     spread.classList.add("page-turn");
                     status.textContent = pageCount ? `Page ${currentPage + 1} of ${pageCount}` : "Page 0 of 0";
                     previous.disabled = currentPage === 0 || pageCount === 0;
                     next.disabled = currentPage >= pageCount - 1 || pageCount === 0;
-
                     if (pageCount === 0) {
                         const empty = document.createElement("p");
                         empty.className = "photo-book-empty";

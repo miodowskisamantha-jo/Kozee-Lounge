@@ -1,0 +1,51 @@
+/* Event cards use different neon colors by event type */
+#events-grid .event-neon-karaoke{
+    --event-neon: #ff55c8;
+    --event-neon-soft: rgba(255,85,200,.42);
+    --event-neon-bg: rgba(45,12,39,.96);
+}
+
+#events-grid .event-neon-dj{
+    --event-neon: #b28cff;
+    --event-neon-soft: rgba(178,140,255,.42);
+    --event-neon-bg: rgba(30,18,53,.96);
+}
+
+#events-grid .event-neon-husker{
+    --event-neon: #ff2638;
+    --event-neon-soft: rgba(255,38,56,.48);
+    --event-neon-bg: rgba(46,8,14,.96);
+}
+
+#events-grid .event-neon-dancing{
+    --event-neon: #ffe45e;
+    --event-neon-soft: rgba(255,228,94,.42);
+    --event-neon-bg: rgba(47,39,10,.96);
+}
+
+#events-grid .event-neon-happy-hour{
+    --event-neon: #ff9a3c;
+    --event-neon-soft: rgba(255,154,60,.42);
+    --event-neon-bg: rgba(43,25,11,.96);
+}
+
+#events-grid .event-neon{
+    border-color:var(--event-neon-soft, rgba(0,212,180,.45));
+    border-top-color:var(--event-neon, #00d4b4);
+    background:linear-gradient(145deg, var(--event-neon-bg, #14191b), #090c0e 82%);
+    box-shadow:0 0 8px var(--event-neon-soft, rgba(0,212,180,.3)), 0 0 20px color-mix(in srgb, var(--event-neon, #00d4b4) 20%, transparent), inset 0 0 14px color-mix(in srgb, var(--event-neon, #00d4b4) 6%, transparent);
+}
+
+#events-grid .event-neon h3{
+    color:var(--event-neon, #83f8e4);
+    text-shadow:0 0 5px var(--event-neon, #00d4b4), 0 0 14px var(--event-neon-soft, rgba(0,212,180,.5));
+}
+
+#events-grid .event-neon:hover{
+    box-shadow:0 0 13px var(--event-neon-soft, rgba(0,212,180,.55)), 0 0 28px color-mix(in srgb, var(--event-neon, #00d4b4) 28%, transparent), inset 0 0 18px color-mix(in srgb, var(--event-neon, #00d4b4) 9%, transparent);
+}
+
+@supports not (color: color-mix(in srgb, red, transparent)){
+    #events-grid .event-neon{ box-shadow:0 0 8px var(--event-neon-soft); }
+    #events-grid .event-neon:hover{ box-shadow:0 0 13px var(--event-neon-soft); }
+}
