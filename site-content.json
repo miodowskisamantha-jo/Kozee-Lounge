@@ -35,7 +35,8 @@
     { "text": "We reserve the right to refuse service to anyone" },
     { "text": "We will not serve anyone who is already intoxicated" },
     { "text": "No drugs" },
-    { "text": "No leaving the premises with an open container" }
+    { "text": "No leaving the premises with an open container" },
+    { "text": "No weapons allowed" }
   ],
   "gallery": [
     { "image": "/Kozee-Lounge/images/Front Entrance.jpg", "alt": "Kozee Lounge front entrance" },
