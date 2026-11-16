@@ -1,6 +1,6 @@
 {
   "specials": {
-    "description": "$2.00 Em' Blackberry Leroux shot\n$2.00 BudSelect bottle a beer\n",
+    "description": "$2.00 Fireball Shots\n$2.00 1800 Blanco Shots\n$2.00 BudSelect bottle a beer\n$2.00 Jello Shots\n$3.00 Bubblegum Shot\n",
     "happy_hour": "Happy Hour",
     "schedule": "Monday - Saturday • 6 PM - 9 PM",
     "sunday": "All Day Sunday"
@@ -10,10 +10,7 @@
       "title": "🏈 Husker Football Saturdays",
       "details": "Join us for every Husker game with fellow fans, cold drinks, and great company. Mama Pizza at Half-Time and complimentary Husker TouchDown Jello Shots."
     },
-    {
-      "title": "We Love You Emily!",
-      "details": "You are in our thoughts and prayers always and forever."
-    }
+    {}
   ],
   "events": [
     {
@@ -39,6 +36,13 @@
     {
       "title": "🍻 Happy Hour",
       "details": "Monday - Saturday, 6 PM - 9 PM; All Day Sunday"
+    }
+  ],
+  "birthdays": [
+    {
+      "name": "Tyrone- Head of Security",
+      "date": "10/22",
+      "note": "Libra...Party Hard like it's 1998, Happy Birthday!"
     }
   ],
   "rules": [
@@ -127,10 +131,12 @@
       "image": "/Kozee-Lounge/images/QVZmMG5sM3ZQSUM4ekpqVw.jpeg"
     },
     {
-      "image": "/Kozee-Lounge/images/Snapchat-615629726.jpg"
+      "image": "/Kozee-Lounge/images/Snapchat-615629726.jpg",
+      "alt": "Sammy and Lindsay"
     },
     {
-      "image": "/Kozee-Lounge/images/Snapchat-1905161200.jpg"
+      "image": "/Kozee-Lounge/images/Snapchat-1905161200.jpg",
+      "alt": "Sammy and Aurora"
     },
     {
       "image": "/Kozee-Lounge/images/Snapchat-531512144.jpg"
